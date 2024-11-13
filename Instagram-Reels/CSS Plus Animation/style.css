@@ -1,0 +1,62 @@
+/* || ** @codewithzaik **   */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #27a1ff;
+  --body-background-color: #0b131e;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--body-background-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* button style  */
+.btn {
+  height: 60px;
+  width: 60px;
+  aspect-ratio: 1/1;
+  background-color: var(--bg-color);
+  border: none;
+  outline: 1px solid var(--bg-color);
+  outline-offset: 5px;
+  border-radius: 100%;
+  display: grid;
+  place-items: center;
+  position: relative;
+  cursor: pointer;
+  animation: plus 1.5s infinite;
+}
+.btn:hover {
+  animation-play-state: paused;
+}
+/* play icon  */
+.icon {
+  height: 0%;
+  width: 0%;
+  border-left: 20px solid #fff;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  transition: 0.3s;
+}
+.btn:hover .icon {
+  transform: scale(1.2);
+}
+
+@keyframes plus {
+  0% {
+    box-shadow: 0px 0px 0px 0px var(--bg-color);
+  }
+  100% {
+    box-shadow: 0px 0px 0px 30px #279aff0f;
+  }
+}
